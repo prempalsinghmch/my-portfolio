@@ -1,0 +1,21 @@
+.treatments-div{
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.treatments-div h1 {
+    text-align: center;
+    padding: 16px;
+    margin-top: 32px;
+}
+
+.treatments-div h2{
+    font-size:1.6rem;
+    padding: 0 16px;
+    color:  #688fde;
+}
+
+.treatments-div p{
+    line-height: 160%;
+}
+

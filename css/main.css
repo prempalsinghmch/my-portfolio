@@ -1,0 +1,267 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+
+
+.carousel-div-inner{
+    max-height: 60vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+/* .carousel-div-inner h4 {
+    
+} */
+
+.carousel-div-inner img{
+    max-height: 60vh;
+    width: 100%;
+    /* border: 10px solid green !important; */
+    /* object-fit: cover; */
+}
+
+.about{
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px;
+}
+
+.about h1{
+    text-align: center;
+    font-weight: 300;
+    /* color: blue; */
+}
+
+.about h3{
+    padding: 8px;
+}
+
+.section-main{
+    /* border: 10px solid green; */
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+
+.secm-right, .secm-left{
+    min-height: 100vh;
+    height:auto !important;       
+    height: 100vh;
+    padding: 0;
+    position: relative;
+}
+
+
+.section-main img{
+   width: 100%;
+   height: 100%;
+   padding: 0;
+}
+
+.secm-right .doc-info{
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    min-height: 50%;
+    height: 50%;
+    width: 50%;
+    height:auto !important;
+    /* border: 2px solid rebeccapurple; */
+    color: seashell;
+}
+
+.doc-info h1{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: rgb(255, 255, 255);
+    /* font-family: "Poppins", sans-serif; */
+}
+
+.doc-info p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #b7cfff;
+    padding: 8px 0px;
+}
+
+.doc-info .sub-info .social-list {
+    padding: 8px 0;
+    margin-top: 8px;
+    font-size: 1.5rem;
+}
+
+.doc-info .sub-info .icon-one i {
+    color: white;
+    padding: 0 4px; 
+   
+}
+
+.doc-info .sub-info div{
+    display: flex;
+    flex-direction: row;
+    line-height: 200%;
+    font-weight: 100;
+    padding: 4px 0px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .doc-info h1{font-size: 1.5rem;}
+    .doc-info p {font-size: 12px; padding: 0;}
+    .doc-info h5{font-size: 1rem;}
+    .doc-info .sub-info div {line-height: 100%; font-size: 0.8rem;}
+    .doc-info .sub-info .icon-one i {padding: 0;font-size: 1rem; padding: 0 2px; margin: 0;}
+    .doc-info .sub-info .social-list {padding:0; margin-top: 6px;}
+    /* .secm-right .doc-info {} */
+}
+
+
+.sectiontwo .dotted-line{
+    text-align: center;
+    width: 100%;
+}
+
+.sectiontwo{
+    min-height: 50vh;
+    padding: 16px 0px;
+}
+
+.sectiontwo h3{
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #17449e;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.sectiontwo .dtemp{
+    margin: 0 auto;
+    padding: 0;
+    content: none;
+    width: 0px;
+    border: 4px solid #597cc4;
+    border-width: 4px;
+    height: 32px;
+    border-radius: 25px;
+
+}
+
+.treatments {
+    width: 90%;
+    margin: 0 auto !important;
+    padding: 32px 0 0 0 ;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.treatments .card{
+    box-shadow: -1px 2px 4px rgba(0,0,0,.25), 1px 1px 3px rgba(0,0,0,.1) !important;
+    /* padding: 8px 0 !important; */
+    margin: 0 auto !important;
+    /* border: 1px solid red; */
+}
+
+.sectionthree{
+    min-height: 60vh;
+    width: 95%;
+    margin: 0 auto;
+    padding: 32px 0;
+}
+
+.contact-left{
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 32px 8px;
+    margin: 0;
+    /* border: 1px solid green; */
+    /* width: 100%; */
+}
+
+.contact-left form{
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 16px;
+   
+}
+
+.contact-left form input{
+    border: 1px solid  #f4f4f4 !important;
+    height: 50px;
+}
+
+.contact-left form textarea{
+    border: 1px solid  #f4f4f4 !important;
+}
+
+.contact-left form button{
+    background-color: #4d93e9;
+    width: 100%;
+}
+
+.contact-right{
+    padding: 2% 4%;
+    /* display: flex; */
+    
+}
+
+.contact-right i{
+    color: #4d93e9;
+    padding: 0 4px;
+    font-size: 1.6rem;
+    line-height: 160%;
+}
+
+.sectionfour{
+    min-height: 50vh;
+    padding: 32px;
+    background-color:  #688fde;
+    color: white;
+}
+
+.sectionfour h1{
+    text-align: center;
+}
+
+.tst-div{
+    height: 30vh;
+}
+
+.testimonial{
+    height: 30vh;
+    
+
+}
+
+.testimonial div{
+    line-height: 160%;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.testimonial i {
+    font-size: 2rem;
+    margin-top: 8px;
+    /* border: 2px solid red; */
+    /* padding: 10px; */
+    /* border-radius: 50%; */
+}
+
+.testimonial h4{
+    font-style: normal;
+}
+
+
