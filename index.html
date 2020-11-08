@@ -15,9 +15,23 @@
     <title>Dr Prempal</title>
   </head>
   <body>
+
+    <div class="progress-container">
+        <img src="static/img/progress.svg" alt="">
+
+    </div>
     
-
-
+    <!-- <div class="alert-container"> -->
+        <div class=" on-success">
+            <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+            <!-- <strong>Success!</strong> This alert box could indicate a successful or positive action. -->
+        </div>
+        <div class=" on-error">
+            <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+            <!-- <strong>Success!</strong> This alert box could indicate a successful or positive action. -->
+        </div>
+    <!-- </div> -->
+    
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#"><img src="/static/img/logo.png" alt="" style="height: 70px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,34 +170,37 @@
           <div class="col-sm-6 contact-left">
             <h3>Make an Appointment</h3>
             Complete the form and we will send you a confirmation within 24 hours
-
-            <form class="" netlify method="POST" name="contact">
+            
+            <form id="contactForm">
               <div class="form-group">
+                  
                 
-                <input type="text" class="form-control" id="inputName" placeholder="Name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
                   
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="form-group col-md-6">
                   
-                  <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
                 </div>
               </div>
               
               <div class="form-group">
                 
-                <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+                <input type="text" class="form-control" id="inputAddress" name="address" placeholder="Address">
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                <textarea class="form-control" id="message" rows="3" name="message" placeholder="Message"></textarea>
               </div>
               
+              <a class="btn btn-primary submit-btn" onclick="SubForm()">SUBMIT NOW</a>
   
-              <button type="submit" class="btn btn-primary">SUBMIT NOW</button>
+              
             </form>
+            
 
           </div>
           <div class="col-sm-6  contact-right">
@@ -378,6 +395,35 @@
     
     <script src="/js/jq.min.js" ></script>
     <script src="/js/bts.min.js" ></script>
+
+    <script>
+        $(".progress-container").hide();
+		function SubForm (){
+
+            // console.log($("#contactForm").serializeArray());
+            $(".progress-container").show();
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/3234/",
+				type:"post",
+				data:$("#contactForm").serializeArray(),
+				success: function(){
+                    // alert("Form Data Submitted :)")
+                    $(".progress-container").hide();
+                    var info='<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Success!</strong> Message sent successfully.'
+                    $(".on-success").html(info); 
+                    $(".on-success").addClass("alert alert-success alert-dismissible");
+				},
+				error: function(){
+                    $(".progress-container").hide();
+                    var info='<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Error Occured!</strong> Try Again.'
+                    $(".on-error").html(info); 
+                    $(".on-error").addClass("alert alert-danger alert-dismissible");
+                    
+					// alert("There was an error :(")
+				}
+			});
+		}
+	</script>
 
     
   </body>
