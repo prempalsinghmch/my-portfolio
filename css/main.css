@@ -162,6 +162,7 @@ body{
     .doc-info .sub-info div {line-height: 100%; font-size: 0.8rem;}
     .doc-info .sub-info .icon-one i {padding: 0;font-size: 1rem; padding: 0 2px; margin: 0;}
     .doc-info .sub-info .social-list {padding:0; margin-top: 6px;}
+    .treatments .card {margin-bottom: 16px;}
     /* .secm-right .doc-info {} */
 }
 
