@@ -57,6 +57,28 @@ var temp3=readTextFile('static/data/photos.txt')
 Photos=create_data(temp3, 'static/img/');
 
 
+function dynamic_gallery(dep){
+    var x = `static/img/${dep}/photos.txt`
+    var y = `static/img/${dep}/videos.txt`
+
+    var a_id = readTextFile(x);
+    var a_vd = readTextFile(y);
+    var a_i = create_data(a_id, `static/img/${dep}/`);
+    var a_v = create_data(a_vd, `static/img/${dep}/`);
+
+    console.log(a_i);
+    console.log(a_v);
+
+    return [a_i, a_v];
+    
+}
+
+function get_deps(){
+    let path = '/gallery/departments.txt'
+    return readTextFile(path);
+}
+
+
 
 
 

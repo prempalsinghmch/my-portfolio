@@ -18,10 +18,7 @@
 <body>
     
 
-      <div class="progress-container">
-        <img src="static/img/progress.svg" alt="">
 
-      </div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <!-- content will be loaded -->
       </nav>
@@ -54,19 +51,20 @@
 
 
     <script src="/js/jq.min.js" ></script>
-    <script src="/js/bts.min.js" ></script>
-    <script src="/js/gallery.js" ></script>
     <script src="/js/load_contents.js" ></script>
 
+    <script src="/js/bts.min.js" ></script>
+    <script src="/js/gallery.js" ></script>
+    
     <script>
         $(document).ready(function(){
             let data_vid=Videos;
 
-            $.each(data_vid, function(i, item) {
-                // console.log(item.title);
-                let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><video width="" controls><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
-                $('.videogallery-row').append(str);
-            });
+            // $.each(data_vid, function(i, item) {
+            //     // console.log(item.title);
+            //     let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><video width="" controls><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
+            //     $('.videogallery-row').append(str);
+            // });
 
             let data_phto=Photos;
             // console.log(data_phto);
