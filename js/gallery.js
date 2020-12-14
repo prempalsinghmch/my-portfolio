@@ -61,13 +61,21 @@ function dynamic_gallery(dep){
     var x = `static/img/${dep}/photos.txt`
     var y = `static/img/${dep}/videos.txt`
 
+    
+
+
+    // console.log(list_v);
+    // console.log(list_i);
+
+
+
     var a_id = readTextFile(x);
     var a_vd = readTextFile(y);
     var a_i = create_data(a_id, `static/img/${dep}/`);
     var a_v = create_data(a_vd, `static/img/${dep}/`);
 
-    console.log(a_i);
-    console.log(a_v);
+    // console.log(a_i);
+    // console.log(a_v);
 
     return [a_i, a_v];
     

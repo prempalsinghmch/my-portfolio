@@ -114,25 +114,51 @@
         $(document).ready(function(){
           let data=dynamic_gallery(name);
 
+          var folder= `/static/img/${name}`;
+          $.ajax({
+              url : folder,
+              success: function (data) {
+                  $(data).find("a").attr("href", function (i, val) {
+                      if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                          // list_i.push(val);
+                          let title=decodeURI(val).split(".")[0]
+                          let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><img class="card-img-top"  src="/static/img/${name}/${val}" style="height:200px" ><div class="card-body"><p class="card-text">${(title).replace(/_/gi, " ")}</p></div></div>`;
+                          $('.photogallery-row').append(str);
+
+                          $('.coming-soon').hide();
+                         
+                      } 
+                      else{
+                        let title=decodeURI(val).split(".")[0]
+                        let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><video width="" controls><source src="/static/img/${name}/${val}" type="video/mp4">Your browser does not support HTML5 video.</video><div class="card-body"><p class="card-text">${(title).replace(/_/gi, " ")}</p></div></div>`;
+                          $('.videogallery-row').append(str);
+                        $('.coming-soon').hide();
+                      }
+                  });
+              }
+          });
+
           // console.log(data[1].length > 0 || data[0].length>0);
 
-          if (data[1].length > 0 || data[0].length>0){
-            $('.coming-soon').hide();
-          }
-          $.each(data[1], function(i, item) {
-              // console.log(item.title);
-              let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><video width="" controls><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
-              $('.videogallery-row').append(str);
-          });
+          // if (data[1].length > 0 || data[0].length>0){
+          //   $('.coming-soon').hide();
+          // }
 
-          let data_phto=Photos;
-          // console.log(data_phto);
 
-          $.each(data[0], function(i, item) {
-              // console.log(item.title);
-              let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><img class="card-img-top"  src="${item.src}" style="height:200px" ><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
-              $('.photogallery-row').append(str);
-          });
+          // $.each(data[1], function(i, item) {
+          //     // console.log(item.title);
+          //     // let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><video width="" controls><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
+          //     // $('.videogallery-row').append(str);
+          // });
+
+          // let data_phto=Photos;
+          // // console.log(data_phto);
+
+          // $.each(data[0], function(i, item) {
+          //     // console.log(item.title);
+          //     // let str=`<div class="card col-sm3" style="padding: 8px; margin:8px"><img class="card-img-top"  src="${item.src}" style="height:200px" ><div class="card-body"><p class="card-text">${(item.title).replace(/_/gi, " ")}</p></div></div>`;
+          //     // $('.photogallery-row').append(str);
+          // });
 
           $(".progress-container").hide();
           
