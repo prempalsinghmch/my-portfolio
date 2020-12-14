@@ -113,8 +113,8 @@
 
         $(document).ready(function(){
           let data=dynamic_gallery(name);
-
-          var folder= `/static/img/${name}`;
+         
+          var folder= `https://raw.githubusercontent.com/prempalsinghmch/prempalsinghmch/dev/static/img/${name}`;
           $.ajax({
               url : folder,
               success: function (data) {
