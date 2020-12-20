@@ -1,7 +1,6 @@
 Kidney_Stone_1.jpeg
 Kidney_Stone_2.jpg
 kidney_stone_3.jpg
-kidney_stone_4.jpg
 kidney_stone_5.jpg
 kidney_stone_6.jpg
 kidney_stone_7.jpg
@@ -36,7 +35,6 @@ kidney_stone_35.jpg
 kidney_stone_36.jpg
 kidney_stone_37.jpg
 kidney_stone_38.jpg
-kidney_stone_39.jpg
 kidney_stone_40.jpg
 kidney_stone_41.jpg
 kidney_stone_42.jpg

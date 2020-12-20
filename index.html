@@ -84,8 +84,8 @@
           </div>
 
         <div class="treatments">
-          <div class="row">
-            <div class="col-sm-3 ">
+          <div class="row" id="treatments-row">
+            <!-- <div class="col-sm-3 ">
               <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="/static/img/Uro_Oncology.jpg" alt="Uro_Oncology">
                 <div class="card-body">
@@ -127,7 +127,7 @@
                   <a href="/treatments.html?name=Kidney Stone" class="card-link">Read More</a>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
@@ -298,6 +298,21 @@
     <script src="/js/gallery.js"></script>
 
     <script src="/js/load_contents.js" ></script>
+
+    <script>
+
+      $(document).ready(function(){
+        let deps=get_deps();
+        // console.log(deps);
+        let i=0;
+        for (i; i<deps.length; i++){
+          let x = deps[i];
+          let str = ` <div class="col-sm-3 "><div class="card" style="width: 18rem;"><img class="card-img-top" src="/static/img/${x}.jpg" alt="${x}"><div class="card-body"><h5 class="card-title">${x}</h5><a href="/treatments.html?name=${x}" class="card-link">Read More</a></div></div></div>`;
+          // console.log(str);
+          $('#treatments-row').append(str);
+        }
+      });
+    </script>
 
     
 
