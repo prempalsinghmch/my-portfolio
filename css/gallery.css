@@ -13,3 +13,13 @@
 .videogallery-row{
     text-align: center;
 }
+
+.gallery-div img {
+    transition:transform 0.25s ease !important;
+}
+
+.gallery-div img:hover {
+    -webkit-transform:scale(1.8) !important;
+    transform:scale(1.8) !important;
+    z-index: 100;
+}
