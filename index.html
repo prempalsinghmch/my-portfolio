@@ -369,11 +369,13 @@
       function success() {
         form.reset();
         // button.style = "display: none ";
-        status.innerHTML = "Thanks!";
+        // status.innerHTML = "Thanks!";
+        alert("From submitted successfully!");
       }
   
       function error() {
-        status.innerHTML = "Oops! There was a problem.";
+        // status.innerHTML = "Oops! There was a problem.";
+        alert("Oops! There was a problem.");
       }
   
       // handle the form submission event
@@ -392,6 +394,7 @@
     // helper function for sending an AJAX request
   
     function ajax(method, url, data, success, error) {
+      $('.progress-container').show();
       var xhr = new XMLHttpRequest();
       xhr.open(method, url);
       xhr.setRequestHeader("Accept", "application/json");
@@ -399,8 +402,10 @@
         if (xhr.readyState !== XMLHttpRequest.DONE) return;
         if (xhr.status === 200) {
           success(xhr.response, xhr.responseType);
+          $(".progress-container").hide();
         } else {
           error(xhr.status, xhr.response, xhr.responseType);
+          $(".progress-container").hide();
         }
       };
       xhr.send(data);
